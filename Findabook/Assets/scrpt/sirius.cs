@@ -8,11 +8,28 @@ public class GameTimer : MonoBehaviour
     public Text timerText; 
     public string deathSceneName = "GameOver"; 
 
+    void Start()
+    {
+        if (timerText == null)
+        {
+            Debug.LogError("Timer Text is not assigned.");
+        }
+        
+            if (timerText == null)
+        {
+            Debug.LogError("Timer Text is not assigned!");
+        }
+            if (string.IsNullOrEmpty(deathSceneName))
+        {
+            Debug.LogError("Death scene name is missing!");
+        }
+
+    }
+
     void Update()
     {
         timeRemaining -= Time.deltaTime;
         timerText.text = Mathf.Ceil(timeRemaining).ToString();
-
         if (timeRemaining <= 0)
         {
             SceneManager.LoadScene(deathSceneName);

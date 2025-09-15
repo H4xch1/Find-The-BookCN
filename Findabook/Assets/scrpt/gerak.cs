@@ -11,6 +11,7 @@ public class gerak : MonoBehaviour
     [SerializeField] private float jumpForce;
     private bool jumpPressedLastFrame = false;
     public coinmanagement cm;
+    [SerializeField] private Animator animator;
 
     void Start()
     {
@@ -44,10 +45,20 @@ public class gerak : MonoBehaviour
 
     public void FixedUpdate()
     {
+
         float moveInput = Input.GetAxisRaw("Horizontal");
         Vector2 movement = new Vector2(moveInput * speed, rb.linearVelocity.y);
         rb.linearVelocity = movement;
+
+        if (moveInput != 0){
+            animator.SetBool("isRunning", true);
+        }
+        else{
+            animator.SetBool("isRunning", false);
+        }
     }
+
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Collectible"))

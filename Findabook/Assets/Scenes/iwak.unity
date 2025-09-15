@@ -358,6 +358,7 @@ MonoBehaviour:
     m_Bits: 8
   jumpForce: 74.9
   cm: {fileID: 1082577203}
+  animator: {fileID: 393965868}
 --- !u!4 &393965865 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7878350319992209165, guid: 36846aba36d04c44c9b25502d68f083c, type: 3}
@@ -436,6 +437,11 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.12, y: 0.21000001}
   m_EdgeRadius: 0
+--- !u!95 &393965868 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1160356261127867848, guid: 36846aba36d04c44c9b25502d68f083c, type: 3}
+  m_PrefabInstance: {fileID: 851120756}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &396953372
 GameObject:
   m_ObjectHideFlags: 0
@@ -611,6 +617,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 112050605}
+  - {fileID: 577448603}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -681,6 +688,85 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &577448602
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 577448603}
+  - component: {fileID: 577448605}
+  - component: {fileID: 577448604}
+  m_Layer: 5
+  m_Name: Text (Legacy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &577448603
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 577448602}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 499696967}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -20.48259}
+  m_SizeDelta: {x: 160, y: 40.9652}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &577448604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 577448602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Text
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 26
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 98
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Time: '
+--- !u!222 &577448605
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 577448602}
+  m_CullTransparentMesh: 1
 --- !u!1 &580484276
 GameObject:
   m_ObjectHideFlags: 0
@@ -1175,8 +1261,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1160356261127867848, guid: 36846aba36d04c44c9b25502d68f083c, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1160356261127867848, guid: 36846aba36d04c44c9b25502d68f083c, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: f165fa38b988f8b49a17e83303f13f14, type: 2}
     - target: {fileID: 7878350319992209165, guid: 36846aba36d04c44c9b25502d68f083c, type: 3}
       propertyPath: m_LocalScale.x
       value: 3.762
@@ -1695,8 +1785,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 972c584aeefdd1948b9aa5603709e579, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  timeRemaining: 100.25
-  timerText: {fileID: 0}
+  timeRemaining: 6
+  timerText: {fileID: 577448604}
   deathSceneName: GameOver
 --- !u!114 &1082577203
 MonoBehaviour:
@@ -3342,6 +3432,6 @@ SceneRoots:
   - {fileID: 851120756}
   - {fileID: 650690920}
   - {fileID: 1591685273}
-  - {fileID: 1082577200}
   - {fileID: 923702665}
   - {fileID: 499696967}
+  - {fileID: 1082577200}
