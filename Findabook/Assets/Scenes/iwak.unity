@@ -156,7 +156,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 1, g: 0, b: 0, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -277,7 +277,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
-  jumpForce: 50.2
+  jumpForce: 74.9
 --- !u!4 &393965865 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7878350319992209165, guid: 36846aba36d04c44c9b25502d68f083c, type: 3}
@@ -497,6 +497,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0673ee167f9821e40a3f953f53f512ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Collectible
+  nextBall: {fileID: 819313262}
+  balls: []
 --- !u!1 &580484276
 GameObject:
   m_ObjectHideFlags: 0
@@ -638,6 +640,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0673ee167f9821e40a3f953f53f512ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Collectible
+  nextBall: {fileID: 759757777}
+  balls:
+  - {fileID: 580484276}
+  - {fileID: 2111247861}
+  - {fileID: 1624032584}
+  - {fileID: 2102784075}
+  - {fileID: 396953372}
+  - {fileID: 819313262}
+  - {fileID: 959747591}
+  - {fileID: 759757777}
 --- !u!1 &650690919
 GameObject:
   m_ObjectHideFlags: 0
@@ -818,6 +830,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0673ee167f9821e40a3f953f53f512ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Collectible
+  nextBall: {fileID: 959747591}
+  balls: []
 --- !u!1 &819313262
 GameObject:
   m_ObjectHideFlags: 0
@@ -959,6 +973,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0673ee167f9821e40a3f953f53f512ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Collectible
+  nextBall: {fileID: 2102784075}
+  balls: []
 --- !u!1001 &851120756
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1227,8 +1243,8 @@ GameObject:
   m_Component:
   - component: {fileID: 959747592}
   - component: {fileID: 959747593}
-  - component: {fileID: 959747594}
   - component: {fileID: 959747595}
+  - component: {fileID: 959747596}
   m_Layer: 0
   m_Name: Circle (6)
   m_TagString: Collectible
@@ -1309,18 +1325,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &959747594
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 959747591}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0673ee167f9821e40a3f953f53f512ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Collectible
 --- !u!70 &959747595
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -1358,6 +1362,51 @@ CapsuleCollider2D:
   m_Offset: {x: -0.0000019073486, y: 0}
   m_Size: {x: 1.0000001, y: 1.0000001}
   m_Direction: 0
+--- !u!114 &959747596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 959747591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0673ee167f9821e40a3f953f53f512ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Collectible
+  nextBall: {fileID: 396953372}
+  balls: []
+--- !u!1 &1082577199
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1082577200}
+  m_Layer: 0
+  m_Name: Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1082577200
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1082577199}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.69849, y: 1.60503, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1414145222
 GameObject:
   m_ObjectHideFlags: 0
@@ -1718,13 +1767,13 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 580484277}
-  - {fileID: 2111247862}
-  - {fileID: 1624032585}
-  - {fileID: 2102784076}
-  - {fileID: 396953373}
-  - {fileID: 959747592}
-  - {fileID: 819313263}
   - {fileID: 759757778}
+  - {fileID: 959747592}
+  - {fileID: 396953373}
+  - {fileID: 819313263}
+  - {fileID: 2102784076}
+  - {fileID: 1624032585}
+  - {fileID: 2111247862}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1624032584
@@ -1868,6 +1917,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0673ee167f9821e40a3f953f53f512ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Collectible
+  nextBall: {fileID: 2111247861}
+  balls: []
 --- !u!1 &1766798067
 GameObject:
   m_ObjectHideFlags: 0
@@ -2669,6 +2720,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0673ee167f9821e40a3f953f53f512ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Collectible
+  nextBall: {fileID: 1624032584}
+  balls: []
 --- !u!1 &2111247861
 GameObject:
   m_ObjectHideFlags: 0
@@ -2810,6 +2863,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0673ee167f9821e40a3f953f53f512ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Collectible
+  nextBall: {fileID: 0}
+  balls: []
 --- !u!1 &2123916312
 GameObject:
   m_ObjectHideFlags: 0
@@ -2982,3 +3037,4 @@ SceneRoots:
   - {fileID: 851120756}
   - {fileID: 650690920}
   - {fileID: 1591685273}
+  - {fileID: 1082577200}
