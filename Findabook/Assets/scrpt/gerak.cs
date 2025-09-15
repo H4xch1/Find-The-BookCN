@@ -5,6 +5,7 @@ public class gerak : MonoBehaviour
 {
     [SerializeField] public float speed;
     [SerializeField] private LayerMask groundLayer;
+    [SerializeField] public SpriteRenderer spriteRenderer;
     private Rigidbody2D rb;
     private BoxCollider2D boxCollider;
     private bool Grounded;
@@ -12,6 +13,8 @@ public class gerak : MonoBehaviour
     private bool jumpPressedLastFrame = false;
     public coinmanagement cm;
     [SerializeField] private Animator animator;
+    private float xPostLastFrame;
+    
 
     void Start()
     {
@@ -35,6 +38,7 @@ public class gerak : MonoBehaviour
             jumpPressedLastFrame = false;
         }
 
+        FlipCharacterX();
     }
 
     public bool IsGrounded()
@@ -42,6 +46,20 @@ public class gerak : MonoBehaviour
         RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0f, Vector2.down, 0.1f, groundLayer);
         return raycastHit.collider != null;
     }
+        private void FlipCharacterX()
+    {
+        if (transform.position.x > xPostLastFrame)
+        {
+            spriteRenderer.flipX = true;
+        }
+        else if (transform.position.x < xPostLastFrame)
+        {
+            spriteRenderer.flipX = false;
+        }
+
+        xPostLastFrame = transform.position.x;
+    }
+
 
     public void FixedUpdate()
     {
@@ -50,20 +68,21 @@ public class gerak : MonoBehaviour
         Vector2 movement = new Vector2(moveInput * speed, rb.linearVelocity.y);
         rb.linearVelocity = movement;
 
-        if (moveInput != 0){
-            animator.SetBool("isRunning", true);
+        if (moveInput != 0)
+        {
+            animator.SetBool("IsRunning", true);
         }
-        else{
-            animator.SetBool("isRunning", false);
+        else
+        {
+            animator.SetBool("IsRunning", false);
         }
     }
-
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Collectible"))
         {
-            cm.coinCount ++;
+            cm.coinCount++;
         }
     }
 }
