@@ -14,6 +14,8 @@ public class gerak : MonoBehaviour
     public coinmanagement cm;
     [SerializeField] private Animator animator;
     private float xPostLastFrame;
+
+   
     
 
     void Start()
@@ -31,20 +33,30 @@ public class gerak : MonoBehaviour
         {
             rb.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
             jumpPressedLastFrame = true;
+
+            animator.SetBool("isJump", true);
         }
 
         if (jumpInput == 0)
         {
             jumpPressedLastFrame = false;
+
+            animator.SetBool("isJump", false);
         }
 
         FlipCharacterX();
+
+       
     }
 
     public bool IsGrounded()
     {
+       
         RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0f, Vector2.down, 0.1f, groundLayer);
+
         return raycastHit.collider != null;
+
+        
     }
         private void FlipCharacterX()
     {
@@ -76,6 +88,7 @@ public class gerak : MonoBehaviour
         {
             animator.SetBool("IsRunning", false);
         }
+
     }
 
     private void OnTriggerEnter2D(Collider2D other)
