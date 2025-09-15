@@ -10,6 +10,7 @@ public class gerak : MonoBehaviour
     private bool Grounded;
     [SerializeField] private float jumpForce;
     private bool jumpPressedLastFrame = false;
+    public coinmanagement cm;
 
     void Start()
     {
@@ -46,5 +47,12 @@ public class gerak : MonoBehaviour
         float moveInput = Input.GetAxisRaw("Horizontal");
         Vector2 movement = new Vector2(moveInput * speed, rb.linearVelocity.y);
         rb.linearVelocity = movement;
+    }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Collectible"))
+        {
+            cm.coinCount ++;
+        }
     }
 }
