@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class gerak : MonoBehaviour
 {
@@ -14,14 +15,32 @@ public class gerak : MonoBehaviour
     public coinmanagement cm;
     [SerializeField] private Animator animator;
     private float xPostLastFrame;
+    public int maxHealth = 3;
+    private int currentHealth;
+    public string deathSceneName = "GameOver";
 
-   
-    
+
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         boxCollider = GetComponent<BoxCollider2D>();
+        currentHealth = maxHealth;
+    }
+
+    public void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
+    }
+
+    void Die()
+    {
+        SceneManager.LoadScene(deathSceneName);
     }
 
     public void Update()
