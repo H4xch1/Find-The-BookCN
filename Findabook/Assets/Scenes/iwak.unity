@@ -468,20 +468,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: -2253911629886400664, guid: 4271d2fa7a06a6b4eba6cbbb360894a7, type: 3}
   m_PrefabInstance: {fileID: 495185155}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &360639240
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 360639236}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7be097bc479db4b4d9213164196ec46a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  rb: {fileID: 0}
-  boxCollider: {fileID: 0}
 --- !u!61 &360639241
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -555,6 +541,40 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &360639243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 360639236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7be5e2a4d65080b4581e52f982acc7a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyFlyPatrol
+  speed: 2
+  moveDistance: 3
+--- !u!114 &360639244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 360639236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68bde485b81e4444c93ab2ce8bd2b872, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyAutoShoot
+  speed: 2
+  moveDistance: 3
+  projectilePrefab: {fileID: 0}
+  firePoint: {fileID: 0}
+  shootInterval: 2
+  minProjectiles: 3
+  maxProjectiles: 6
+  spreadAngle: 45
 --- !u!1 &393965861 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -2253911629886400664, guid: 36846aba36d04c44c9b25502d68f083c, type: 3}
@@ -978,7 +998,10 @@ PrefabInstance:
       addedObject: {fileID: 360639241}
     - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 4271d2fa7a06a6b4eba6cbbb360894a7, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 360639240}
+      addedObject: {fileID: 360639244}
+    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 4271d2fa7a06a6b4eba6cbbb360894a7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 360639243}
   m_SourcePrefab: {fileID: -8435245712485981826, guid: 4271d2fa7a06a6b4eba6cbbb360894a7, type: 3}
 --- !u!1 &499696966
 GameObject:
