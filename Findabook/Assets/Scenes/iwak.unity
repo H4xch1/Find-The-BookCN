@@ -2202,7 +2202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 972c584aeefdd1948b9aa5603709e579, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  timeRemaining: 104.9
+  timeRemaining: 11.4
   timerText: {fileID: 577448604}
   deathSceneName: GameOver
 --- !u!114 &1082577203
