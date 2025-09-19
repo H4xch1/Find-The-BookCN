@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 7bcd97c2cf22ea44eae24435316a7faf
   - enabled: 1
+    path: Assets/Scenes/CutScene1.unity
+    guid: b993f4e95d3b0ae43990bf1f4c357cf3
+  - enabled: 1
     path: Assets/Scenes/iwak.unity
     guid: 1eb4b002c4f95ee4ea987186387cba49
   - enabled: 1

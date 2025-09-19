@@ -3,8 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuManager : MonoBehaviour
 {
-    public void StartGame()
+    public void Play()
     {
-        SceneManager.LoadScene("Iwak");
+        SceneManager.LoadScene("CutScene1");
     }
 }
