@@ -38,6 +38,7 @@ public class StraightProjectile : MonoBehaviour
         transform.Translate(currentDirection * speed * Time.deltaTime);
     }
 
+    // HANYA 1x OnTriggerEnter2D
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))

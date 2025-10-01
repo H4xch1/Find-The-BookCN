@@ -11,12 +11,8 @@ public class EnemyAutoShoot : MonoBehaviour
     [Header("Shooting")]
     public GameObject projectilePrefab;
     public Transform firePoint;
-    public float shootInterval = 2f;
+    public float shootInterval = 1f;   // tembak tiap 1 detik
     private float shootTimer;
-
-    public int minProjectiles = 3;
-    public int maxProjectiles = 6;
-    public float spreadAngle = 45f;
 
     private Transform player;
 
@@ -24,7 +20,7 @@ public class EnemyAutoShoot : MonoBehaviour
     {
         startPos = transform.position;
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        shootTimer = shootInterval;
+        shootTimer = 0f; // langsung bisa nembak di awal
     }
 
     void Update()
@@ -56,23 +52,18 @@ public class EnemyAutoShoot : MonoBehaviour
         shootTimer -= Time.deltaTime;
         if (shootTimer <= 0f)
         {
-            ShootSpread();
+            ShootOne();            // panggil fungsi tembak 1 peluru
             shootTimer = shootInterval;
         }
     }
 
-    void ShootSpread()
+    void ShootOne()
     {
-        Vector2 baseDir = (player.position - firePoint.position).normalized;
-        int numProjectiles = Random.Range(minProjectiles, maxProjectiles + 1);
+        // arah ke player
+        Vector2 dir = (player.position - firePoint.position).normalized;
 
-        for (int i = 0; i < numProjectiles; i++)
-        {
-            float angle = Random.Range(-spreadAngle, spreadAngle);
-            Vector2 spreadDir = Quaternion.Euler(0, 0, angle) * baseDir;
-
-            GameObject proj = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity);
-            proj.GetComponent<StraightProjectile>().SetInitialDirection(spreadDir);
-        }
+        // spawn 1 peluru
+        GameObject proj = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity);
+        proj.GetComponent<StraightProjectile>().SetInitialDirection(dir);
     }
 }

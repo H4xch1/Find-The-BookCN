@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using Unity.VisualScripting;
 
 public class Dialog : MonoBehaviour
 {
@@ -19,7 +18,7 @@ public class Dialog : MonoBehaviour
 
     void Update()
     {
-        if (input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0)) // ✅ perbaikan Input
         {
             if (textComponent.text == lines[index])
             {
