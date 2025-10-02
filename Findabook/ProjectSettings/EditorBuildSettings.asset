@@ -18,8 +18,11 @@ EditorBuildSettings:
     path: Assets/Scenes/iwak.unity
     guid: 1eb4b002c4f95ee4ea987186387cba49
   - enabled: 1
+    path: Assets/Scenes/Victory.unity
+    guid: 21027721d1bb5a04da71010a886a6c5c
+  - enabled: 1
     path: Assets/Scenes/GameOver.unity
-    guid: 1d241cb38bdfc304785560f69e7a88c1
+    guid: e15c481517b8be44d8adedaafff403fc
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
