@@ -1,8 +1,9 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public int maxHealth = 999;  // kasih HP besar biar gak mati dulu
+    public int maxHealth = 10;  // kasih HP besar biar gak mati dulu
     private int currentHealth;
 
     void Start()
@@ -17,5 +18,11 @@ public class PlayerHealth : MonoBehaviour
 
         // sementara tidak ada fungsi Die()
         // kalau sudah selesai test, bisa aktifkan lagi
+        Die();
+    }
+
+    void Die()
+    {
+        SceneManager.LoadScene("GameOver");
     }
 }
