@@ -1,5 +1,6 @@
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
+using System.Collections;
 public class Collectible : MonoBehaviour
 {
     public GameObject nextBall; // Assign Ball2 in the Inspector
@@ -12,17 +13,21 @@ public class Collectible : MonoBehaviour
             balls[i].SetActive(i == 0); // Only activate the first ball
         }
     }
-
+    
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
+            if (GameManager.Instance != null)
+                GameManager.Instance.CollectCoin();
+            else
+                Debug.LogError("GameManager.Instance is null. Make sure a GameManager exists in the scene.");
             if (nextBall != null)
             {
                 nextBall.SetActive(true); // Show Ball2
             }
-            // Add score, play sound, etc.
-            Destroy(gameObject); // Remove the collectible
+            
+            Destroy(gameObject); // remove coin from scene (or call pooling return)
         }
     }
 }
