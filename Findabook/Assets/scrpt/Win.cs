@@ -32,9 +32,9 @@ public class GameManager : MonoBehaviour
 
     public void CollectCoin()
     {
-        remainingCoins--;
+        remainingCoins++;
         Debug.Log("Coin collected. Remaining: " + remainingCoins);
-        if (remainingCoins <= 0)
+        if (remainingCoins >= 8)
         {
             SceneManager.LoadScene(winSceneName);
         }
