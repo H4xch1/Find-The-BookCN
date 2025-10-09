@@ -462,6 +462,7 @@
 "Assets/scrpt/EnemyFlyPatrol.cs"
 "Assets/scrpt/GameOverS.cs"
 "Assets/scrpt/gerak.cs"
+"Assets/scrpt/MainMenuS.cs"
 "Assets/scrpt/PlayerHealth.cs"
 "Assets/scrpt/SceneChangeOnTime.cs"
 "Assets/scrpt/SettingS.cs"
