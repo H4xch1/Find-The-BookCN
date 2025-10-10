@@ -467,6 +467,7 @@
 "Assets/scrpt/SceneChangeOnTime.cs"
 "Assets/scrpt/SettingS.cs"
 "Assets/scrpt/sirius.cs"
+"Assets/scrpt/SoundManagerS.cs"
 "Assets/scrpt/StraightProjectile.cs"
 "Assets/scrpt/VictoryS.cs"
 "Assets/scrpt/Win.cs"
