@@ -15,7 +15,8 @@ public class gerak : MonoBehaviour
     public coinmanagement cm;
     [SerializeField] private Animator animator;
     private float xPostLastFrame;
-    
+    private float moveInput = 0f;
+    private bool jumpRequest = false;
 
 
     void Start()
@@ -24,24 +25,56 @@ public class gerak : MonoBehaviour
         boxCollider = GetComponent<BoxCollider2D>();
     }
 
+    public void MoveLeft()
+    {
+        moveInput = -1f;
+    }
+
+    public void MoveRight()
+    {
+        moveInput = 1f;
+    }
+
+    public void StopMoving()
+    {
+        moveInput = 0f;
+    }
+
+    public void JumpButton()
+    {
+        if (Grounded && !jumpPressedLastFrame)
+        {
+            jumpRequest = true;
+        }
+    }
+
     public void Update()
     {
         Grounded = IsGrounded();
-        float jumpInput = Input.GetAxisRaw("Vertical");
 
-        if (jumpInput > 0 && Grounded && !jumpPressedLastFrame)
+        if (jumpRequest)
         {
             rb.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
+            jumpRequest = false;
             jumpPressedLastFrame = true;
 
             animator.SetBool("isJump", true);
         }
 
-        if (jumpInput == 0)
+        if (!jumpRequest)
         {
             jumpPressedLastFrame = false;
 
             animator.SetBool("isJump", false);
+        }
+
+        if (Grounded)
+        {
+            animator.SetBool("isJump", false);
+        }
+        else
+        {
+            animator.SetBool("isJump", true);
         }
 
         FlipCharacterX();
@@ -76,7 +109,6 @@ public class gerak : MonoBehaviour
     public void FixedUpdate()
     {
 
-        float moveInput = Input.GetAxisRaw("Horizontal");
         Vector2 movement = new Vector2(moveInput * speed, rb.linearVelocity.y);
         rb.linearVelocity = movement;
 
