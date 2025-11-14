@@ -1,0 +1,12 @@
+# ninja log v5
+277	1986	7848062015956615	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	6d781e48d4217713
+1995	2777	7848062023871238	C:/AbilPPLG/Find-The-BookCN/Findabook/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/2u6g5d47/obj/arm64-v8a/libswappywrapper.so	5b4e66d9f58a04cd
+138	24648	7848062242386859	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	34d6210d8e55f22f
+157	24680	7848062242432237	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	2938b3d1ee9b8484
+116	24696	7848062242691557	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	501c1c873b3441bc
+208	24703	7848062243215361	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	8553a3d3e42f6f17
+2	24864	7848062244964514	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	6f658397b8ffff5f
+233	25431	7848062250678287	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	a63e9d7254e4c5c7
+185	25571	7848062252237835	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	ad90a11b90083c88
+36	25863	7848062255164496	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	ac165f420923bf3f
+25864	26232	7848062258898075	C:/AbilPPLG/Find-The-BookCN/Findabook/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/2u6g5d47/obj/arm64-v8a/libgame.so	bc94dfa01291a7e5
