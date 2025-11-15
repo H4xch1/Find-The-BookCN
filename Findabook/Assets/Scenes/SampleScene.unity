@@ -166,6 +166,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0673ee167f9821e40a3f953f53f512ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  nextBall: {fileID: 0}
+  balls: []
 --- !u!50 &155419233
 Rigidbody2D:
   serializedVersion: 5
@@ -985,6 +987,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0673ee167f9821e40a3f953f53f512ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  nextBall: {fileID: 0}
+  balls: []
 --- !u!50 &775158646
 Rigidbody2D:
   serializedVersion: 5
@@ -1163,6 +1167,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0673ee167f9821e40a3f953f53f512ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  nextBall: {fileID: 0}
+  balls: []
 --- !u!50 &869285706
 Rigidbody2D:
   serializedVersion: 5
@@ -1476,6 +1482,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0673ee167f9821e40a3f953f53f512ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  nextBall: {fileID: 0}
+  balls: []
 --- !u!50 &989869351
 Rigidbody2D:
   serializedVersion: 5
@@ -1654,6 +1662,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0673ee167f9821e40a3f953f53f512ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  nextBall: {fileID: 0}
+  balls: []
 --- !u!50 &1058935226
 Rigidbody2D:
   serializedVersion: 5
@@ -1832,6 +1842,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0673ee167f9821e40a3f953f53f512ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  nextBall: {fileID: 0}
+  balls: []
 --- !u!50 &1076069213
 Rigidbody2D:
   serializedVersion: 5
@@ -2010,6 +2022,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0673ee167f9821e40a3f953f53f512ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  nextBall: {fileID: 0}
+  balls: []
 --- !u!50 &1179769710
 Rigidbody2D:
   serializedVersion: 5
@@ -2353,6 +2367,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0673ee167f9821e40a3f953f53f512ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  nextBall: {fileID: 0}
+  balls: []
 --- !u!50 &1283267355
 Rigidbody2D:
   serializedVersion: 5
@@ -2610,6 +2626,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0673ee167f9821e40a3f953f53f512ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  nextBall: {fileID: 0}
+  balls: []
 --- !u!50 &1386412837
 Rigidbody2D:
   serializedVersion: 5
@@ -2953,6 +2971,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0673ee167f9821e40a3f953f53f512ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  nextBall: {fileID: 0}
+  balls: []
 --- !u!50 &1433774819
 Rigidbody2D:
   serializedVersion: 5
@@ -3131,6 +3151,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0673ee167f9821e40a3f953f53f512ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  nextBall: {fileID: 0}
+  balls: []
 --- !u!50 &1439800555
 Rigidbody2D:
   serializedVersion: 5
@@ -3309,6 +3331,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0673ee167f9821e40a3f953f53f512ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  nextBall: {fileID: 0}
+  balls: []
 --- !u!50 &1669037152
 Rigidbody2D:
   serializedVersion: 5
@@ -3487,6 +3511,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0673ee167f9821e40a3f953f53f512ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  nextBall: {fileID: 0}
+  balls: []
 --- !u!50 &1727129440
 Rigidbody2D:
   serializedVersion: 5
@@ -4046,6 +4072,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0673ee167f9821e40a3f953f53f512ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  nextBall: {fileID: 0}
+  balls: []
 --- !u!50 &1952188509
 Rigidbody2D:
   serializedVersion: 5
@@ -4213,7 +4241,10 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
+  spriteRenderer: {fileID: 0}
   jumpForce: 22.4
+  cm: {fileID: 0}
+  animator: {fileID: 0}
 --- !u!50 &2040545425
 Rigidbody2D:
   serializedVersion: 5
@@ -4370,10 +4401,7 @@ SceneRoots:
   - {fileID: 1737542521}
   - {fileID: 1314772532}
   - {fileID: 917481039}
-HEAD
+  - {fileID: 512520900}
+  - {fileID: 943459686}
   - {fileID: 1804481000}
   - {fileID: 1830345874}
-  - {fileID: 943459686}
-
-  - {fileID: 512520900}
-cf339c832b53881a7c0283207caf85b71df28942
